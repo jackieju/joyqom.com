@@ -1,0 +1,256 @@
+<html>
+
+<head>	
+
+	<meta name="google-site-verification" content="cG1eT14oGBUv7UU06rp7n7DJ9vPJyez0gLPo1n18S_0" />
+	
+	<title>JOYCOM - Innovate for your joy, i-robot - iPhone Brained Robot</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<style type="text/css" media="screen">
+
+a{
+	text-decoration: none;
+}
+
+#slideshow_nav{
+	bottom: 10px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	right: 10px;
+	z-index:100;
+}
+#jumpto{
+	bottom: 10px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 180px;
+	z-index:100;
+}
+#slideshow_nav li.active{
+	background-position: 0px -67px;
+	z-index:100;
+}
+#slideshow img{
+	width:1024px;
+}
+#slideshow_nav li{
+	background: url(img/cleardot8.png) no-repeat 0px 0px;
+display: inline-block;
+font-weight: bold;
+height: 33px;
+width: 33px;
+}
+</style>
+<script src="../javascripts/jquery.js" />
+<script src="../javascripts/jquery.cycle.all.js" />
+<script>
+function show_irobot(){
+	var s = "<div>Iphone Brained Robot - showing how iphone changes robot which will change your life</div>";
+	s += "<iframe width=\"420\" height=\"315\" src=\"http://www.youtube.com/embed/GCHpNgCtajo\" frameborder=\"0\" allowfullscreen></iframe><p/>";
+	s += "<iframe width=\"420\" height=\"315\" src=\"http://www.youtube.com/embed/zOKuOxI2khA\" frameborder=\"0\" allowfullscreen></iframe><p/>";
+	s += "<iframe width=\"420\" height=\"315\" src=\"http://www.youtube.com/embed/hsyu1ZGvhjA\" frameborder=\"0\" allowfullscreen></iframe><p/>";
+	s += "<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/EhQbmVtTffc\" frameborder=\"0\" allowfullscreen></iframe><p/>";
+	s += "<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/F_p48t5YOx4\" frameborder=\"0\" allowfullscreen></iframe><p/>";
+	s += "<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/rROt9PDetUg\" frameborder=\"0\" allowfullscreen></iframe><p/>";
+
+	$("#content").get(0).innerHTML = s;
+	
+	$("#span_irobot").css("color", "blue");
+	
+}
+function home(){
+	window.location = "http://leaksmarket.heroku.com/joyqom/index.html";
+}
+$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) { 
+    $(pager).find('li').removeClass('active').filter('li:eq('+currSlideIndex+')').addClass('active');
+}; 
+$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc..., 
+		pager: "#slideshow_nav",
+		timeout:8000,
+		pagerAnchorBuilder: function(i) { 
+       		return "<a href='javascript:;' title='"+$(".slideshow img:eq("+i+")").attr("alt")+"' alt='"+$(".slideshow img:eq("+i+")").attr("alt")+"'><li>&nbsp;</li></a>"; 
+    	} 
+	});
+
+	
+	$("#slideshow_nav li").click(function(){
+			$(".slideshow").cycle("pause");
+	setTimeout(function(){
+		$(".slideshow").cycle("resume");
+	},30000);
+	});
+});
+
+</script>
+<body style="font-family: verdana, arial, helvetica, sans-serif;">
+
+<div style="width:100%;border:0px solid black;text-align:center;">
+
+	<div id="main" style="width:1024px;margin:20 auto;text-align:left;">
+		<div id = "top" style="">
+			<div style="float:left;" onclick="home()" >
+				<img src="img/logo.png"  height="30" style="cursor:pointer;" />
+				<img src="img/logo_t.png" height="25" style="top:102px;cursor:pointer;"/>
+				<div style="cursor:pointer;float:left;margin-top:-7;margin-left:66;top:-10;font-size:9pt;font-style:italic;color:grey;">
+					Innovate your joy
+				</div>
+			</div>
+			
+			<div style="float:right;color:grey;font-size:10pt;">
+				<a href="blog.html"> Blog</a> | 	<a href="team.html">About us</a> | <a href="emailto:ju@joyqom.com">Contact us</a>
+				</div>
+				
+				<div style="clear:both">
+			</div>
+			<!--hr-->
+		
+		</div>
+		<!--div id="left" style="float:left;border:0px dotted blue;width:200px;">&nbsp;
+		</div-->
+		<div id = "center" style="float:left;width:1024px;border:0px dotted green;text-align:center;margin-top:10px;">
+			<div id="menu" style="margin:0 auto;border:0px solid black;display:none;">
+				<div style="margin:0 auto;text-align:center;font-size:12pt;font-family: verdana, arial, helvetica, sans-serif;color:#666666;">
+					<!--	Apps&nbsp;| &nbsp;Games| &nbsp;-->
+					<span id="span_irobot" onclick="show_irobot();" style="cursor:pointer">
+							<span>i-robot - </span>
+							<span style="">iPhone Brianed Robot</span>
+					</span>
+				</div>
+				
+			</div><!-- menu -->
+			
+			<!--div id="centered" style="position:absolute;left:50%;width:800px;margin-left:-400px;border:0px solid red;"><used to center content -->
+				<div id="slide" style="position:relative;margin:0 auto;border:0px solid black;text-align:center;width:1024px;">
+	
+					<div id="slideshow" class="slideshow" style="position:relative;z-index:1;margin:0 auto;height:350px;overflow-y:hidden;">
+								<a href="video.html"><img src="img/title5.jpg" border="0" alt="iRobot Roomba 700 Series Vacuuming Robot" /></a>
+								<a href="video.html"><img src="img/title7.jpg" border="0" alt="iRobot Roomba 700 Series Vacuuming Robot" /></a>
+		  						<a href="video.html"><img src="img/title8.jpg" border="0" alt="iRobot Roomba 700 Series Vacuuming Robot" /></a>
+					</div>
+					<ul id="slideshow_nav" style=""></ul>
+					<div id="jumpto" style="font-size:10pt;color:#ffffff;background:transparent;padding:5px 10px;opacity:1;"><a href="video.html" style="color:white;">>> Check what he can do</a></div>
+				</div><!-- slide -->
+				<!-- nav -->
+				<div style="margin-top:8px;">
+				<div style="text-align:left;font-size:10pt;float:left;border:0px solid red">
+					<a href="#">iPhone App</a>&nbsp;<img src="img/appstore.png" height="15px" width="60px"/><br>
+					<a href="#">How to buy </a><br>
+					<a href="#">Support</a>
+				</div>
+				
+				<div style="text-align:left;font-size:10pt;float:left;margin-left:200px;">
+					<a href="blog.html">Blog </a><br>
+					<a href="video.html">Video </a><br>
+					<a href="#">Photo </a><br>
+				</div>
+				
+				<div style="text-align:left;font-size:10pt;float:left;margin-left:200px;">
+					<a href="#">Open iRobot Platform </a><br>
+					<a href="#">Open iRobot API Documents</a><br>
+					<a href="#">Developers Forum </a><br>
+				</div>
+				</div>
+				<!-- nav -->
+				
+					
+				<div id="content" style="margin:30 auto;border:0px solid green;text-align:center;position:relative;display:none;">
+					<div style="padding:5px;">
+						Video: i-robot - iPhone Brianed Robot prototype milestone 1<br>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/7R8ncO9iCI0" frameborder="0" allowfullscreen></iframe>
+						<!--img src="img/under_construction_large.jpg" height="200" style="margin: 100 auto;"/-->
+					</div>
+					<div style="padding:5px;">
+							Blog: <a href="http://wp.me/p1dht8-c">One hour to build your own SIRI on iphone4 </a>
+					</div>
+				</div><!-- content -->
+			
+			</div>
+			<!--/div><centered -->
+		<div id="right" style="float:right;border:0px solid green;width:300px;">
+			
+		</div>
+		<div style="clear:both"></div>
+		<div id="bottom" style="">
+			<hr>
+			<div id="share" style="text-align:left;float:left;">
+				<!--iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.joyqom.com&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe-->
+				<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.joyqom.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=179677018747566" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
+				
+				
+				<!--a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.joyqom.com" data-text="JOYCOM iRobot - iPhone Brained Robot" data-via="joycom2" data-lang="en" data-size="large">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script-->
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.joyqom.com" data-text="i-robot - iPhone Brianed Robot @JOYCOM PTE. LTD." data-via="joycom2" data-lang="en" data-count="none"></a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		
+		
+			<!-- sina weibo -->
+			<!--script type="text/javascript" charset="utf-8">
+(function(){
+  var _w = 86 , _h = 18;
+  var param = {
+    /*url:location.href,*/
+	url:'http://www.joyqom.com',
+    type:'6',
+    count:'0', /**是否显示分享数，1显示(可选)*/
+    appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+    title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+    pic:'', /**分享图片的路径(可选)*/
+    ralateUid:'1404793074', /**关联用户的UID，分享微博会@该用户(可选)*/
+	language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+    rnd:new Date().valueOf()
+  }
+  var temp = [];
+  for( var p in param ){
+    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+  }
+  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+})()
+</script-->
+<script type="text/javascript" charset="utf-8">
+(function(){
+  var _w = 72 , _h = 18;
+  var param = {
+    /*url:location.href,*/
+	url:'http://www.joyqom.com',
+    type:'3',
+    count:'1', /**是否显示分享数，1显示(可选)*/
+    appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+    title:'i-robot - iPhone Brianed Robot @JOYCOM PTE. LTD.', /**分享的文字内容(可选，默认为所在页面的title)*/
+    pic:'', /**分享图片的路径(可选)*/
+    ralateUid:'1404793074', /**关联用户的UID，分享微博会@该用户(可选)*/
+	language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+    rnd:new Date().valueOf()
+  }
+  var temp = [];
+  for( var p in param ){
+    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+  }
+  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+})()
+</script>
+<!-- sina weibo -->
+			</div>
+			<div style="text-align:center;float:left;width:1024px;">
+				<span style="font-size:10pt;">JOYCOM PTE. LTD &nbsp; email: ju@joyqom.com&nbsp; phone: +65 93506965</span>
+			</div>
+						<!-- trademark-->
+							<div style="clear:both"></div>
+			<div style="text-align:left;float:left;width:auto;">
+				<span style="font-size:8pt;color:grey;">WALL-E is trademark of Disney.</span>
+			</div>
+					<!-- trademark-->
+
+		</div>
+	</div>
+
+</div>
+</body>
+
